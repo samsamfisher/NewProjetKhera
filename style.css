@@ -295,7 +295,7 @@ body.slider__body {
   width: 100vw;
   z-index: 1;
   position: absolute;
-  background: url("../../assets/img/fond-new.png");
+  background: url("assets/img/fond-new.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -308,7 +308,7 @@ body.slider__body {
   width: 100vw;
   z-index: 10;
   position: absolute;
-  background: url("../../assets/img/bc.png");
+  background: url("assets/img/bc.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -321,7 +321,7 @@ body.slider__body {
   width: 100vw;
   z-index: 5;
   position: absolute;
-  background: url("../../assets/img/porte.png");
+  background: url("assets/img/porte.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
