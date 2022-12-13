@@ -1,0 +1,29 @@
+// import slick
+@import "../assets/lib/slick/slick.scss";
+@import "layout/slide";
+
+// import settings
+@import "settings/global-variables";
+@import "settings/color-variables";
+@import "settings/fonts";
+
+// helpers
+@import "helpers/mixins";
+@import "helpers/helpers";
+@import "helpers/text";
+
+// import base
+@import "base/base";
+//@import "base/slider";
+
+// import layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/section";
+@import "layout/slide";
+
+// import components
+@import "components/card";
+@import "components/slick";
+@import "components/modal";
+@import "components/modal-zombie";

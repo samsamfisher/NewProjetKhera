@@ -1,0 +1,32 @@
+#home {
+	background: black;
+	}
+	#acceuil {
+		background: url("assets/img/grunge-texture.jpg") center/cover;
+	}
+	#section_perso {
+		background: linear-gradient(180deg, rgba(39 45 45) 22%, rgba(42,66,72,1) 50%, rgba(91,120,124,1) 100%);
+	}
+	/* #section_khera{
+	
+	} */
+	#section_zombie {
+		background: linear-gradient(180deg, rgba(19,17,20,1) 5%, rgba(35,30,27,1) 22%, rgba(81,65,66,1) 68%);
+	}
+
+	section > span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 7vw;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	}
+
+	section > video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	}

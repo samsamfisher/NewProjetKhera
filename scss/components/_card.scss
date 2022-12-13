@@ -1,0 +1,220 @@
+// ------ section cards ------
+.cards {
+    height: 100vh;
+
+    &__button {
+        margin: 10px 0;
+    }
+
+    // ------ Khera ------
+    &__khera {
+        height: 100vh;
+        font-family: "font-test";
+        background: url(../../assets/img/bc-uni2.jpg) center/cover;
+        @media screen and (min-width: 992px){
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+
+        &__title {
+            margin: 0 auto;
+            padding: 30px 20px 40px;
+            text-align: center;
+            color: $color-text-khera;
+            font-size: 1.7em;
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    font-size: 3em;
+                }
+                @media screen and (min-width: 992px){
+                    font-size: 3.7em;
+                }
+        }
+
+        &__flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (min-width: 992px){
+                padding-left: 75px;
+                justify-content: space-between;
+                margin-bottom: 120px;
+            }
+        }
+
+
+        &__img {
+            width: 180px;
+            transition: scale 0.4s ease-in-out;
+            animation: spin 180s infinite linear;
+            &:hover {
+                scale: 1.1;
+            }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    width: 235px;
+                }
+                @media screen and (min-width: 992px){
+                    width: 400px;
+                }
+        }
+
+
+        &__text {
+            position:absolute;
+            bottom: 20px;
+            height: 15em;
+            margin: 1em 1em;
+            overflow: hidden;
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    height: 13em;
+                    margin: 1em 4em;
+                }
+                @media screen and (min-width: 992px){
+                    position: inherit;
+                    width: 50%;
+                    margin: 0;
+                    margin-right: 40px;
+                    height: 15em;
+                    overflow: visible;
+                }
+            &:hover {
+                animation-play-state: paused;
+            }
+
+            &::after {
+                content: '';
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                -webkit-box-shadow: inset 0px 5px 23px 5px rgba(0,73,124,0.3); 
+                box-shadow: inset 0px 5px 23px 5px rgba(0,73,124,0.3);
+            }
+        }
+
+        &__para {
+            opacity: 0;
+            position:relative;
+            padding: 2em;
+            padding-top: 8em;
+            height: 15em;
+            font-size: 1em;
+            text-align: center;
+            color: $color-text-khera;
+            cursor: pointer;
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    padding: 0;
+                    padding-top: 4.5em;
+                    font-size: 1.5em;
+                }
+                @media screen and (min-width: 992px){
+                    animation: none;
+                    padding: 0;
+                    opacity: 1;
+                    font-size: 1.2em;
+                    margin: 0;
+                    margin-right: 30px;
+                    line-height: 1.4;
+                    font-weight: bolder;
+                }
+        }
+    }
+
+    
+    // ------------ Wraith & Zombie -------------
+    &__hero {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @media screen and (min-width: 768px) {
+            width: 90%;
+            margin-top: auto;
+            margin-bottom: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        &__large {
+            width: 100%;
+            border-radius: 10px;
+            @media screen and (min-width: 768px) {
+               display: none;
+            }
+
+        }
+
+        &__portrait {
+            display: none;
+            @media screen and (min-width: 768px){
+                display: block; 
+                height: 90vh;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            }
+        }
+    }
+
+    &__display {
+        display: none;
+        @media screen and (min-width: 768px){
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__text {
+        font-family: 'font-test';
+        @media screen and (min-width: 768px){
+            width: 65%;
+        }
+        
+        &--wraith {
+            font-size: 1.5em;
+            color: #00e1ff;
+        }
+    }
+
+    &__bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    &__span__title {
+        font-size: 2em;
+        color: #00e1ff;
+    }
+
+    &__span__text {
+        font-size: 1.5em;
+        color: #00b4cc;
+    }
+
+    &__para {
+        text-align: center;
+        color: rgb(255, 209, 116);
+
+        &--wraith {
+            color: #D9C3A9;
+        }
+
+    }
+}
+
+
+
+
+
+  @keyframes spin {
+    100% { 
+        transform: rotate(360deg); 
+    }
+  }
+
+

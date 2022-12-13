@@ -1,0 +1,60 @@
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    bottom: 15px;
+}
+
+.slick-prev {
+    position: absolute;
+    bottom: 100px;
+    left: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+
+
+.slick-next {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+
+.slick-prev:before {
+    content: "";
+    background-image: url("../../assets/img/previous.png");
+  }
+  
+  .slick-next:before {
+    content: ">";
+    background-image: url("../../assets/img/previous.png");
+
+  }
+
+    /* the slides */
+    .slick-slide {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    
+    
+    /* the parent */
+    .slick-list {
+        padding: 0 20px;
+        margin-right: -50px;
+        margin-left: -50px;
+    }
+    
+    .slick-slide img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    

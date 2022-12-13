@@ -1,0 +1,84 @@
+// ------ Modal Wraith ------ 
+.modal{
+  margin-left: 10px;
+  opacity: 0;
+  width: 70%;
+  max-width: 500px;
+  // min-width: 300px;
+  font-size: 0.8em;
+  padding: 20px 10px;
+  text-align: center;
+  background: #2B6E77;
+  border-radius: 5px;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 50px));
+  transition: opacity 0.4s ease-out,
+  transform 0.4s ease-out; 
+    
+
+    &__container {
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+    }
+    
+
+    &__close {
+      height: 30px;
+      padding: 4px 8px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      background: #ff365e;
+      color: #fff;
+    }
+
+    &__overlay {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #333333d3;
+      transition: opacity 0.4s 0.2s ease-out;
+    }
+    
+}
+
+
+.modal__container.active {
+  // display: block;
+    visibility: visible;
+  }
+
+  .modal__container.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal__container.active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+}
+
+
+  .modal__container.active .modal__overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+  }
+
+  .modal__container.active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+  }

@@ -1,0 +1,50 @@
+.slider__page--active {
+    .presentation__title {
+        top: 200px;
+    }
+
+    .cards__para--abs{
+        margin-top: 0;
+        animation: defilement-ver 40s infinite linear;
+    }
+
+    .header__bc__door {
+        animation: door 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .cards__khera__para {
+        opacity: 1;
+        animation: defilement-ver 70s infinite linear;
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            animation: defilement-ver 40s ease-in;
+        }
+        @media screen and (min-width: 992px){
+            animation: none;
+        }
+    }
+
+    .cards__khera__text:hover {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes door {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-800px);
+    }
+}
+
+// ------ Animation Khera ------
+@keyframes defilement-ver {
+    0% {
+      transform: translate3d(0,120px,0);
+    }
+    100% {
+      transform: translate3d(0,-130%,0);
+    }
+  }
+
