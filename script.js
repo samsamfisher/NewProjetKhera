@@ -1,21 +1,25 @@
+// ------- Slider Vertical -------
 let mySlider = slider('.slides');
 
 
 // ---- Modal Wraith -----
-const modalContainer = document.querySelector('.modal__container');
-const modalTriggers = document.querySelectorAll('.modal__trigger');
+const modalContainer = document.querySelector('.modal--wraith');
+const modalTriggers = document.querySelectorAll('.js-trigger-wraith');
 
-modalTriggers.forEach(trigger => trigger.addEventListener('click', toggleModal(modalContainer)));
+modalTriggers.forEach(trigger => trigger.addEventListener('click', toggleModal));
 
+function toggleModal() {
+    modalContainer.classList.toggle("active");
+}
 
 // ---- Modal Zombie -----
-const modalContainerZombie = document.querySelector('.modal__zombie__container');
-const modalTriggersZombie = document.querySelectorAll('.modal__zombie__trigger');
+const modalContainerZombie = document.querySelector('.modal--zombie');
+const modalTriggersZombie = document.querySelectorAll('.js-trigger-zombie');
 
-modalTriggersZombie.forEach(trigger => trigger.addEventListener('click', toggleModal(modalContainerZombie)));
+modalTriggersZombie.forEach(trigger => trigger.addEventListener('click', toggleModalZombie));
 
+function toggleModalZombie() {
+    modalContainerZombie.classList.toggle("active");
+}
 
 // ----------------------------------------------
-function toggleModal(container) {
-    container.classList.toggle("active");
-}

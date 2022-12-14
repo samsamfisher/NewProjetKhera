@@ -1,0 +1,13 @@
+.js-trigger-wraith {
+    display: block;
+    @media screen and (min-width: 992px){
+        display: none;
+    }
+}
+
+.js-trigger-zombie {
+    display: block;
+    @media screen and (min-width: 992px){
+        display: none;
+    }
+}

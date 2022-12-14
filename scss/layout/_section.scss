@@ -3,5 +3,37 @@
 }
 
 .section-video {
+    &__video {
+        width: 495%;
+        margin-left: -197%;
+    }
+    background: black;
     z-index: 9999;
+}
+
+#section_perso {
+    background-color: grey;
+    z-index: 2;
+}
+
+#section_zombie {
+    background-color: #514142;
+    z-index: 1;
+}
+
+section > span {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 7vw;
+font-family: sans-serif;
+text-transform: uppercase;
+color: #fff;
+}
+
+section > video {
+position: absolute;
+top: 0;
+left: 0;
 }

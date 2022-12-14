@@ -1,6 +1,11 @@
 // ------ section cards ------
 .cards {
     height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 
     &__button {
         margin: 10px 0;
@@ -21,7 +26,7 @@
         &__title {
             margin: 0 auto;
             padding: 30px 20px 40px;
-            text-align: center;
+            // text-align: center;
             color: $color-text-khera;
             font-size: 1.7em;
                 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -39,7 +44,7 @@
             @media screen and (min-width: 992px){
                 padding-left: 75px;
                 justify-content: space-between;
-                margin-bottom: 120px;
+                margin-bottom: 50px;
             }
         }
 
@@ -73,8 +78,7 @@
                 @media screen and (min-width: 992px){
                     position: inherit;
                     width: 50%;
-                    margin: 0;
-                    margin-right: 40px;
+                    margin: auto;
                     height: 15em;
                     overflow: visible;
                 }
@@ -102,7 +106,7 @@
             padding-top: 8em;
             height: 15em;
             font-size: 1em;
-            text-align: center;
+
             color: $color-text-khera;
             cursor: pointer;
                 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -116,7 +120,6 @@
                     opacity: 1;
                     font-size: 1.2em;
                     margin: 0;
-                    margin-right: 30px;
                     line-height: 1.4;
                     font-weight: bolder;
                 }
@@ -130,8 +133,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        @media screen and (min-width: 768px) {
+        align-items: center;
+        @media screen and (min-width: 992px) {
             width: 90%;
             margin-top: auto;
             margin-bottom: auto;
@@ -142,15 +145,14 @@
         &__large {
             width: 100%;
             border-radius: 10px;
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 992px) {
                display: none;
             }
-
         }
 
         &__portrait {
             display: none;
-            @media screen and (min-width: 768px){
+            @media screen and (min-width: 992px){
                 display: block; 
                 height: 90vh;
                 border-radius: 10px;
@@ -161,22 +163,23 @@
 
     &__display {
         display: none;
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: 992px){
             display: block;
-            text-align: center;
         }
     }
 
     &__text {
         font-family: 'font-test';
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: 992px){
             width: 65%;
         }
-        
         &--wraith {
             font-size: 1.5em;
-            color: #00e1ff;
         }
+        &--zombie {
+            font-size: 1.35em;
+        }
+
     }
 
     &__bio {
@@ -184,20 +187,31 @@
         flex-direction: column;
         align-items: center;
         overflow: hidden;
+
+        &--wraith {
+            color: #A2E3EB;
+        }
+
+        &--zombie {
+            color: #C0B3BC;
+        }
     }
 
-    &__span__title {
-        font-size: 2em;
-        color: #00e1ff;
+    &__span {
+
+        &__title {
+            font-size: 2em;
+            text-decoration: underline;
+        }
+    
+        &__text {
+            font-size: 1.5em;
+        }
     }
 
-    &__span__text {
-        font-size: 1.5em;
-        color: #00b4cc;
-    }
+   
 
     &__para {
-        text-align: center;
         color: rgb(255, 209, 116);
 
         &--wraith {
@@ -216,5 +230,4 @@
         transform: rotate(360deg); 
     }
   }
-
 
