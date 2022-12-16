@@ -188,27 +188,7 @@
 }
 
 @font-face {
-  font-family: "font-title-main";
-  src: url("assets/fonts/Wallpoet/Wallpoet-Regular.ttf");
-}
-
-@font-face {
-  font-family: "font-texte-para";
-  src: url("assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
-}
-
-@font-face {
-  font-family: "font-texte-title-blod";
-  src: url("assets/fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf");
-}
-
-@font-face {
-  font-family: "font-title";
-  src: url("assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf");
-}
-
-@font-face {
-  font-family: "font-test";
+  font-family: "font-text";
   src: url("assets/fonts/Allerta_Stencil/AllertaStencil-Regular.ttf");
 }
 
@@ -216,6 +196,7 @@ body,
 html {
   max-width: 1400px;
   height: 100%;
+  font-family: "font-text";
 }
 
 body.slider__body {
@@ -329,6 +310,13 @@ body.slider__body {
   background-size: cover;
 }
 
+.header__video {
+  width: 495%;
+  margin-left: -197%;
+  background: black;
+  z-index: 9999;
+}
+
 .header__bloc__text {
   position: absolute;
   top: 80px;
@@ -352,7 +340,6 @@ body.slider__body {
   padding: 45px 0;
   font-size: 2.3em;
   text-align: center;
-  font-family: "font-title-main";
   text-shadow: 1px 0px 20px black,  -10px 10px 45px black,  -10px -10px 45px black,  10px -10px 45px black;
 }
 
@@ -378,7 +365,6 @@ body.slider__body {
   font-size: 1.5em;
   font-weight: bold;
   line-height: 1.4;
-  font-family: "font-test";
 }
 
 .header__para__title {
@@ -405,18 +391,13 @@ body.slider__body {
   }
 }
 
+.section__home {
+  background-color: black;
+  z-index: 15;
+}
+
 #section_khera {
   position: relative;
-}
-
-.section-video {
-  background: black;
-  z-index: 9999;
-}
-
-.section-video__video {
-  width: 495%;
-  margin-left: -197%;
 }
 
 #section_perso {
@@ -427,24 +408,6 @@ body.slider__body {
 #section_zombie {
   background-color: #514142;
   z-index: 1;
-}
-
-section > span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 7vw;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-section > video {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .slider__page--active .presentation__title {
@@ -534,7 +497,6 @@ section > video {
 
 .cards__khera {
   height: 100vh;
-  font-family: "font-test";
   background: url(assets/img/bc-uni2.jpg) center/cover;
 }
 
@@ -555,6 +517,7 @@ section > video {
 .cards__khera__title {
   margin: 0 auto;
   padding: 30px 20px 40px;
+  text-align: center;
   color: #E3674B;
   font-size: 1.7em;
 }
@@ -585,11 +548,11 @@ section > video {
 
 @media screen and (min-width: 992px) {
   .cards__khera__flex {
-    padding-left: 75px;
+    padding-left: 100px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
   }
 }
 
@@ -685,10 +648,11 @@ section > video {
             animation: none;
     padding: 0;
     opacity: 1;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 0;
     line-height: 1.4;
     font-weight: bolder;
+    text-align: center;
   }
 }
 
@@ -744,6 +708,7 @@ section > video {
 
 @media screen and (min-width: 992px) {
   .cards__hero__portrait {
+    margin-left: 60px;
     display: block;
     height: 90vh;
     border-radius: 10px;
@@ -763,7 +728,8 @@ section > video {
 }
 
 .cards__text {
-  font-family: 'font-test';
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 992px) {
@@ -778,6 +744,10 @@ section > video {
 
 .cards__text--zombie {
   font-size: 1.35em;
+}
+
+.cards__text--zombie span {
+  margin-top: 20px;
 }
 
 .cards__bio {
@@ -803,20 +773,12 @@ section > video {
 }
 
 .cards__span__title {
-  font-size: 2em;
+  font-size: 1.5em;
   text-decoration: underline;
 }
 
 .cards__span__text {
   font-size: 1.5em;
-}
-
-.cards__para {
-  color: #ffd174;
-}
-
-.cards__para--wraith {
-  color: #D9C3A9;
 }
 
 @-webkit-keyframes spin {
@@ -905,9 +867,9 @@ button {
   width: 70%;
   max-width: 500px;
   font-size: 0.8em;
-  padding: 20px 10px;
+  padding: 35px 30px;
   text-align: center;
-  background: #2B6E77;
+  background: #58a4ae;
   border-radius: 5px;
   position: absolute;
   top: 48%;
@@ -924,6 +886,12 @@ button {
   background: #705d5e;
 }
 
+.modal__text {
+  font-size: 1.3em;
+  padding: 10px;
+  line-height: 1.2;
+}
+
 .modal__close {
   height: 30px;
   padding: 4px 8px;
@@ -934,8 +902,8 @@ button {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  background: #ff365e;
-  color: #fff;
+  background: #c43131;
+  color: #C0B3BC;
 }
 
 .modal__overlay {

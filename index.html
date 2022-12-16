@@ -11,8 +11,9 @@
 <body>
 	<!-- ------- First Page Video ------ -->
 	<div class="slides">
-		<section class="section-video" id="home">
-			<video autoplay loop muted plays-inline poster width="100%" height="100%" class="section-video__video">
+		<section class="section__home" id="home">
+			<audio autoplay preload="auto" src="assets/audio/dark-action-horror-trailer-112213_YzL3KDfe.mp3"></audio>
+			<video autoplay loop muted plays-inline poster width="100%" height="100%" class="section__home__video">
 				<source src="assets/videos/Cinematic.mp4" type="video/mp4">
 				Your browser does not support the video tag.
 			</video>
@@ -21,7 +22,7 @@
 		<div class="header" id="acceuil">
 			<div class="header__bc__cadre"></div>
 			<div class="header__bc__fond">
-				<video autoplay loop muted plays-inline poster width="100%" height="100%" class="section-video__video">
+				<video autoplay loop muted plays-inline poster width="100%" height="100%" class="header__video">
 					<source src="assets/videos/Menu 1 V.mp4" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
@@ -37,7 +38,7 @@
 			</div>
 		</div>
 		<!-- ------- Third Page Khèra ------ -->
-		<div id="section_khera">
+		<div class="section__khera" id="section_khera">
 			<div class="cards__khera">
 				<h2 class="cards__khera__title">Comète Khéra KR-2022-294</h2>
 				<div class="cards__khera__flex">
@@ -58,7 +59,6 @@
 			</div>
 			</div>
 		</div>
-		
 		<!-- ------- Fourth Page Wraith ------ -->
 		<div class="cards" id="section_perso">
 			<div class="modal modal--wraith">
@@ -66,7 +66,7 @@
 				<div class="modal__container">
 					<button class="modal__close js-trigger-wraith">X</button>
 					<h1 class="cards__title cards__title--wraith">Wraith</h1>
-					<p class="cards__text cards__text--wraith">Un ancien soldat avec un passé trouble qui aurait servit dans un paquet de services d'élites. 
+					<p class="modal__text modal__text--wraith">Un ancien soldat avec un passé trouble qui aurait servit dans un paquet de services d'élites. 
 						Un homme engagé pour ses nombreux talents mais viré pour son comportement dissident. 
 						Son amour pour la liberté a fait de lui un mercenaire, choisissant les contrats avec lesquels 
 						il partageait le plus de valeurs, et bien entendu, un bon gros chèque, cela va sans dire.
@@ -79,9 +79,18 @@
 				<img class="cards__hero__portrait" src="assets/img/wraith.png" alt="wraith">
 				<div class="cards__text">
 					<div class="cards__bio cards__bio--wraith">
-						<p class="cards__span cards__span"><span class="cards__span__title">Nom</span><span class="cards__span__text"> : Wraith</span></p>
-						<p class="cards__span"><span class="cards__span__title">Age</span><span class="cards__span__text"> : Inconnu</span></p>
-						<p class="cards__span"><span class="cards__span__title">Profession</span><span class="cards__span__text"> : Mercenaire</span></p>
+						<p class="cards__span cards__span">
+							<span class="cards__span__title">Nom</span>
+							<span class="cards__span__text"> : Wraith</span>
+						</p>
+						<p class="cards__span">
+							<span class="cards__span__title">Age</span>
+							<span class="cards__span__text"> : Inconnu</span>
+						</p>
+						<p class="cards__span">
+							<span class="cards__span__title">Profession</span>
+							<span class="cards__span__text"> : Mercenaire</span>
+						</p>
 						<button class="cards__button js-trigger-wraith">
 							En savoir plus sur Wraith
 						</button>
@@ -101,26 +110,13 @@
 				<div class="modal__overlay js-trigger-zombie"></div>
 				<div class="modal__container">
 					<button class="modal__close js-trigger-zombie">X</button>
-					<h1 class="cards__title cards__title--zombie">Les Zombies</h1>
-					<p class="cards__text cards__text--zombie">Lorsque l'incident arriva au Complexe J.Williams, 
-						certaines personnes qui travaillaient 
-						à ce moment là ont appelé leur proche. En regroupant toutes les informations, il s'avère 
-						qu'un accident serait arrivé dans la matinée. Le bâtiment se serait alors mit en sécurité :
-						fermeture des accès à l’extérieur, éclairage en mode secours avec coupure de la ventilation.
-						Ensuite ils ont entendu des hurlement provenant du sous sol, les gardes ont utilisé des gaz
-						lacrymogènes, des coups de feu et des cris de douleurs ont ensuite retentis. Pour terminé, 
-						une coupure général d'énergie. Puis un fort bruit sourd. Un proche indique qu'il est resté 
-						avec son interlocuteur au téléphone caché sous un bureau. Ce dernier lui parle de "monstres",
-						de "zombies". Des créatures humaines de loin, mais loin de l'être, impossible à raisonner. 
-						Le dernier son au téléphone fut un mélange de pleure et de gargarisme avant de laisser place 
-						au silence durant quelques secondes... Enfin, comme une respiration halletante, des murmures
-						glaçants... et le téléphone s'éteint.
-						<br>
+					<h1 class="cards__text cards__text--zombie">Les Zombies</h1>
+					 <p class="modal__text cards__text">
 						" Ils ne sont plus des hommes, certains y ressemble encore un peu, d'autres plus du tout. 
 						Leur déplacement saccadé, le gargarisme rauque qui sort de leur bouche mais surtout leur 
 						regard livide d'une lueur bleuté nous confirme qu'ils n'ont plus rien avoir avec ce qu'ils
 						ont été. Ce sont aujourd'hui des créatures avides de violence et de mort. Ces monstres 
-						recrachés des enfers ne sont ici que pour semer désolation."
+						recrachés des enfers ne sont ici que pour semer désolation."<br><br>
 						Pensée de Wraith, jour J
 					</p>
 				</div>
@@ -130,66 +126,18 @@
 				<img class="cards__hero__portrait" src="assets/img/zombie-portrait-man.jpg" alt="zombie">
 				<div class="cards__text">
 					<div class="cards__bio cards__bio--zombie">
-						<p class="cards__span"><span class="cards__span__title">Prototype</span><span class="cards__span__text"> : 112-C</span></p>
-						<p class="cards__span"><span class="cards__span__title">Date de création</span><span class="cards__span__text"> : Inconnu</span></p>
-						<p class="cards__span"><span class="cards__span__title">Origine</span><span class="cards__span__text"> : Khéra</span></p>
-						<button class="cards__button js-trigger-zombie">
-							En savoir plus sur les Zombies
-						</button>
-						 <p class="cards__text cards__text--zombie cards__display">
-							" Ils ne sont plus des hommes, certains y ressemble encore un peu, d'autres plus du tout. 
-							Leur déplacement saccadé, le gargarisme rauque qui sort de leur bouche mais surtout leur 
-							regard livide d'une lueur bleuté nous confirme qu'ils n'ont plus rien avoir avec ce qu'ils
-							ont été. Ce sont aujourd'hui des créatures avides de violence et de mort. Ces monstres 
-							recrachés des enfers ne sont ici que pour semer désolation."
-							<p class="cards__text">Pensée de Wraith, jour J</p>
+						<p class="cards__span">
+							<span class="cards__span__title">Prototype</span>
+							<span class="cards__span__text"> : 112-C</span>
 						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- <div class="game" id="section_game">
-
-			<canvas id="canvas" width="800" height="600" style="background-color: rgb(0, 208, 255);">
-			</canvas>
-		</div> -->
-		<div class="cards" id="section_zombie">
-			<div class="modal modal--zombie">
-				<div class="modal__overlay js-trigger-zombie"></div>
-				<div class="modal__container">
-					<button class="modal__close js-trigger-zombie">X</button>
-					<h1 class="cards__title cards__title--zombie">Les Zombies</h1>
-					<p class="cards__text cards__text--zombie">Lorsque l'incident arriva au Complexe J.Williams, 
-						certaines personnes qui travaillaient 
-						à ce moment là ont appelé leur proche. En regroupant toutes les informations, il s'avère 
-						qu'un accident serait arrivé dans la matinée. Le bâtiment se serait alors mit en sécurité :
-						fermeture des accès à l’extérieur, éclairage en mode secours avec coupure de la ventilation.
-						Ensuite ils ont entendu des hurlement provenant du sous sol, les gardes ont utilisé des gaz
-						lacrymogènes, des coups de feu et des cris de douleurs ont ensuite retentis. Pour terminé, 
-						une coupure général d'énergie. Puis un fort bruit sourd. Un proche indique qu'il est resté 
-						avec son interlocuteur au téléphone caché sous un bureau. Ce dernier lui parle de "monstres",
-						de "zombies". Des créatures humaines de loin, mais loin de l'être, impossible à raisonner. 
-						Le dernier son au téléphone fut un mélange de pleure et de gargarisme avant de laisser place 
-						au silence durant quelques secondes... Enfin, comme une respiration halletante, des murmures
-						glaçants... et le téléphone s'éteint.
-						<br>
-						" Ils ne sont plus des hommes, certains y ressemble encore un peu, d'autres plus du tout. 
-						Leur déplacement saccadé, le gargarisme rauque qui sort de leur bouche mais surtout leur 
-						regard livide d'une lueur bleuté nous confirme qu'ils n'ont plus rien avoir avec ce qu'ils
-						ont été. Ce sont aujourd'hui des créatures avides de violence et de mort. Ces monstres 
-						recrachés des enfers ne sont ici que pour semer désolation."
-						Pensée de Wraith, jour J
-					</p>
-				</div>
-			</div>
-			<div class="cards__hero">
-				<img class="cards__hero__large" src="assets/img/zombie-large-1.jpg" alt="zombie">
-				<img class="cards__hero__portrait" src="assets/img/zombie-portrait-fem.jpg" alt="zombie">
-				<div class="cards__text">
-					<div class="cards__bio cards__bio--zombie">
-						<p class="cards__span"><span class="cards__span__title">Prototype</span><span class="cards__span__text"> : 126-E</span></p>
-						<p class="cards__span"><span class="cards__span__title">Date de création</span><span class="cards__span__text"> : Inconnu</span></p>
-						<p class="cards__span"><span class="cards__span__title">Origine</span><span class="cards__span__text"> : Khéra</span></p>
+						<p class="cards__span">
+							<span class="cards__span__title">Date de création</span>
+							<span class="cards__span__text"> : Inconnu</span>
+						</p>
+						<p class="cards__span">
+							<span class="cards__span__title">Origine</span>
+							<span class="cards__span__text"> : Khéra</span>
+						</p>
 						<button class="cards__button js-trigger-zombie">
 							En savoir plus sur les Zombies
 						</button>
@@ -199,19 +147,14 @@
 							regard livide d'une lueur bleuté nous confirme qu'ils n'ont plus rien avoir avec ce qu'ils
 							ont été. Ce sont aujourd'hui des créatures avides de violence et de mort. Ces monstres 
 							recrachés des enfers ne sont ici que pour semer désolation."
-							<p class="cards__text">Pensée de Wraith, jour J</p>
+							<span class="cards__text cards__display">Pensée de Wraith, jour J</span>
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
-	<script src="assets/lib/slick/slick.js"></script>
 	<script src="assets/lib/slider/slider.js"></script>
 	<script src="script.js"></script>
-	<!-- <script src="game.js" ></script>
-	<script src="main.js" ></script> -->
 </body>
 </html>
